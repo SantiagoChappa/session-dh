@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link href="/css/login.css" rel="stylesheet" >
+    <title>Ingreso</title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+   
+    <main class="main-login">
+        <section class="ingreso">
+        <h2>INGRESO</h2> 
+
+        <form action="/ingreso" method="POST">
+            <div class="left-login">
+                    <input type="email" name="emailLogin" id="emailLogin" placeholder="Correo electrónico" >
+                <div class="text-error">
+                <% if (locals.errors && errors.emailLogin){ %>
+                <%=  errors.emailLogin.msg %>
+                <% } %>
+                </div>
+                    <input type="password" name="passwordLogin" id="passwordLogin" placeholder="Contraseña">
+                <div class="text-error">
+                <% if (locals.errors && errors.passwordLogin){ %>
+                <%=  errors.passwordLogin.msg %>
+                <% } %>
+                </div>  
+            <div class="checkbox">
+                <input type="checkbox" value="guardar-inicio" id="guardar-inicio" name="guardar-inicio"><label for="guardar-inicio" id="label1">Recordar inicio de sesión</label>
+            </div>
+                <button type="submit" id="boton-ingreso">Ingresar</button></a>
+
+            </div>
+        </form>
+        <div class="right-login">
+            <div class="ingreso-fac-go">
+            <p>O ingresar con:</p>
+                <a href="#" id="facebook-ingreso"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" id="google-ingreso"><i class="fab fa-google"></i></a>
+            </div>
+            <div class="registrarme">
+            <label for="registerBtn">¿No tenés una cuenta?</label>
+                <a href="/registro"><button id="registerBtn">Registrarme</button></a>
+            </div>
+        </div>
+        </div>
+        </div>
+        </section>
+    </main>
+    <footer class="foot">
+        <%- include('partials/footer.ejs') %>
+      </footer>
+</body>
+</html>

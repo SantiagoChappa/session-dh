@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link href="/css/listado.css" rel="stylesheet">
+    <title>Listado de productos</title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <main>
+        <% producto.forEach(producto=>{ %>
+        <a id="link-producto" href="/productos/detalle/<%= producto.id %>">
+            <article class="productos">
+            <div class="item">
+                <img src="/img/productos/<%= producto.image%>">
+            </div>
+            <div class="detalle">
+                <p id="precio">$<%= producto.price.toLocaleString("es",{minimumFractionDigits: 0}) %></p>
+                <% if(producto.discount != 0){ %>
+                <p id="descuento"><%= producto.discount%>% OFF</p>
+                <% } %> 
+                <p id="producto-nombre"><%= producto.name%></p>
+            </div>
+        </article>
+        </a>
+        <% }) %>
+    </main>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

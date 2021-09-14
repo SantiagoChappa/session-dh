@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #ebebeb;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+}
+.texto{
+    position: absolute;
+    text-align: center;
+    top: 18vw;
+    left: 32vw;
+    font-style: italic;
+}
+h1{
+    text-align: center;
+    font-size: 90px;
+    color: rgb(0, 67, 194);
+}

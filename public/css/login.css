@@ -1,0 +1,279 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ebebeb;
+}
+main{
+    padding-top: 50%;
+    padding-bottom: 15%;
+}
+main h2{
+    text-align: center;
+}
+.ingreso{
+    background-color: #fff;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+.ingreso label{
+    margin-bottom: 6%;
+}
+.text-error{
+    color: #e60000c4;
+    margin: -0.5% 22% 2%;
+    text-align: start;
+}
+.text-error input{
+    border: #e60000c4 1px solid;
+}
+.left-login input {
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+    margin: 2% 6%;
+    width: 87%;
+    height: 14vw;
+    padding: 3%;
+}
+.right-login p{
+    width: 100%;
+}
+#boton-ingreso{
+    color: #fff;
+    background-color: #003d8c;
+    border: none;
+    padding: 3%;
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 0% 0% 7% 6%;
+}
+#guardar-inicio {
+    width: 4%;
+    height: 7vw;
+}
+.checkbox{
+    position: relative;
+    margin-bottom: 4%;
+}
+#label1{
+    position: absolute;
+    top: 27%;
+    left: 11%;
+}
+.right-login {
+    margin-left: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 6%;
+}
+.right-login p{
+    width: 70%;
+    align-self: center;
+}
+#facebook-ingreso{
+    color: #000;
+    width: 20%;
+    height: 7vw;
+    background-color: #1773EA;
+    padding: 1% 5%;
+    border-radius: 6px;
+    margin-left: 5%;
+    box-shadow: 0 0 4px #646464;
+}
+#google-ingreso{
+    width: 16%;
+    height: 7vw;
+    background-color: #fff;
+    padding: 1% 2%;
+    border-radius: 6px;
+    margin-left: 4%;
+    text-align: center;
+    color: #000;
+    box-shadow: 0 0 4px #646464;
+}  
+.fa-facebook-f {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+.fa-google{
+    text-align: center;
+}
+#registerBtn {
+    color: #000;
+    background-color: #fff;
+    border: none;
+    padding: 2%;
+    font-size: 12px;
+    border-radius: 6px;
+    margin: 0% 0% 7% 7%;
+    width: 60%;
+    box-shadow: 0 0 4px #646464;
+}
+.ingreso-fac-go {
+    display: flex;
+    width: 46%;
+}
+.registrarme {
+    display: flex;
+    align-self: center;
+    margin-top: 4%;
+    width: 100%;
+}
+.registrarme a{
+    width: 35%;
+}       
+@media (min-width:768px){
+    main {
+        padding-top: 28%;
+        padding-bottom: 15%;
+    }
+    .left-login input {
+        border-radius: 5px;
+        border: 1px solid #d1d1d1;
+        margin: 2% 23%;
+        width: 55%;
+        height: 9vw;
+        padding: 3%;
+        font-size: 22px;
+    }
+    #label1 {
+        top: 35%;
+        left: 21%;
+        margin-left: 6%;
+    }
+    #guardar-inicio {
+        width: 3%;
+        height: 5vw;
+    }
+    #boton-ingreso {
+        padding: 3%;
+        font-size: 16px;
+        border-radius: 6px;
+        margin: -2% 0% 7% 22%;
+    }
+    #facebook-ingreso {
+        width: 8%;
+        height: 4vw;
+        padding: 1.5% 2%;
+    }
+    #google-ingreso {
+        width: 9%;
+        height: 4vw;
+        padding: 1.5%;
+        border-radius: 6px;
+        margin-left: 4%;
+    }
+    #registerBtn {
+        font-size: 14px;
+        width: 13%;
+    }
+    .ingreso h2{
+        font-size: 38px;
+    }
+    .right-login p{
+        width: 34%;
+    }
+    .ingreso label{
+        margin-left: 20%;
+    }
+    .ingreso-fac-go {
+        margin-left: 17%;
+    }
+    .registrarme{
+        width: 83%;
+    }
+    #registerBtn{
+        width: 41%;
+    }
+}
+@media (min-width:1200px){
+    main{
+        padding-top: 3%;
+    }
+    .ingreso{
+        border: 1px solid #6464647d;
+        box-shadow: 0 0 5px #646464;
+    }
+    .left-login input{
+        margin: 1% 22%;
+        padding: 2%;
+        height: 5vw;
+    }
+    #label1{
+        margin-left: 5%;
+        font-size: 19px;
+    }
+    #boton-ingreso{
+        padding: 1%;
+        font-size: 18px;
+        margin: -4% 0% 4% 22%;
+        width: 10%;
+        height: 4vw;
+    }
+    #facebook-ingreso{
+        width: 10%;
+        height: 2vw;
+        padding: 1.5% 2.5%;
+    }
+    #google-ingreso{
+        height: 2vw;
+        width: 10%;
+    }
+    .ingreso label{
+        margin-left: 0;
+        margin-bottom: 3%;
+    }
+    #registerBtn{
+        width: 110%;
+        margin-left: 10%;
+    }
+    .ingreso h2{
+        margin: 4% 0;
+        text-align: center;
+        font-size: 46px;
+    }
+    .right-login{
+        margin-left: 21%;
+    }
+    .ingreso-fac-go p{
+        width: 43%;
+        align-self: none;
+    }
+    .ingreso{
+        padding: 1% 6%;
+    }
+    .main-login{
+        padding: 4% 17%;
+    }
+    #guardar-ingreso{
+        height: 4vw;
+    }
+    .checkbox{
+        margin-bottom: 1%;
+    }
+    .registrarme{
+        width: 51%;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+        margin-left: 5%;
+        margin-top: 1%;
+    }
+    .ingreso-fac-go {
+        width: 42%;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+        border-right: 1px solid #ebebeb;
+        margin-left: 0;
+    }
+    #boton-ingreso{
+        transition: all 450ms;
+    }
+    #boton-ingreso:hover{
+        color: #000;
+        background-color: #ebebeb;
+        box-shadow: 0 0 5px;
+    }
+}

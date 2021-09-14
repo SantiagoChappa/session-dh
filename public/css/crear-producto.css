@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header #crear-producto{
+    display: none;
+}
+main{
+    padding-top: 55%;
+    padding-bottom: 20%;
+    background-color: #ebebeb;
+}
+.crear{
+    background-color: #fff;
+    padding: 20px;
+}
+.crear form{
+    margin-top: 7%;
+}
+.crear h2{
+    padding-bottom: 5%;
+    border-bottom: 1px solid #ebebeb;
+}
+form input, form select, form label, form button{
+    display: block;
+    margin: 8px 8px;
+}
+.crear form input{
+    border: 1px solid #ebebeb;
+    border-radius: 7px;
+    width: 100%;
+    height: 10vw;
+}
+.crear form select{
+    width: 50%;
+}
+.crear form button{
+    width: 15vw;
+    height: 8vw;
+    color: #fff;
+    background-color: #003c8c;
+    border: none;
+    box-shadow: 2px 2px 4px;
+    display: inline-block;
+}
+#imagen{
+    border: none;
+    border-radius: 0;
+}
+
+
+/*TABLET*/
+@media (min-width: 768px){
+    main{
+        padding-top: 28%;
+        padding-bottom: 20%;
+    }
+    .crear form{
+        margin-top: 4%;
+    }
+    .crear form input{
+        height: 7vw;
+    }
+    .crear h2{
+        padding-bottom: 3%;
+    }
+    .crear form select{
+        height: 4vw;
+    }
+    .crear form button{
+        width: 13vw;
+        height: 7vw;
+        font-size: 25px;
+        margin-top: 5%;
+    }
+}
+@media (min-width:1200px){
+    main{
+        padding: 8%;
+        padding-top: 5%;
+    }
+    .crear form input{
+        width: 65%;
+        height: 4vw;
+    }
+    .crear form select{
+        height: 3vw;
+    }
+    .crear form button{
+        width: 11vw;
+        height: 4vw;
+        margin-top: 4%;
+        transition: all 450ms;
+    }
+    .crear form button:hover{
+        color: #000;
+        background-color: #ebebeb;
+        box-shadow: 0 0 5px;
+    }
+    .crear{
+        padding: 4%;
+        box-shadow: 0 0 5px;
+        border: none;
+    }
+}

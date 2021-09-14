@@ -1,0 +1,408 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    background-color: #ebebeb;
+}
+main{
+    background-color: #ebebeb;
+}
+.main{
+    padding: 10% 7% 15% 9%;
+    background-color: #fff;
+    margin: 53% 0% 15% 0%;
+}
+#codigo {
+    color: #646466;
+}
+#descuento{
+    color: #008000;
+}
+.producto-nombre {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 3%;
+}
+.producto-descripcion {
+    margin-top: 14%;
+    border-top: 1px solid #ebebeb;
+    padding-top: 8%;
+}
+.producto-precio{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: lighter;
+    font-style: italic;
+    margin-bottom: 5%;
+}
+#precio, #descuento{
+    align-self: center;
+}
+/*Descripcion*/
+.lista-descripcion{ 
+    padding-left: 5%;
+    padding-bottom: 10%;
+    border-bottom: 1px solid #ebebeb;
+}
+.lista-descripcion li{
+    line-height: 25px;
+}
+#titular-especificaciones {
+    padding: 5% 0;
+}
+.especificaciones {
+    padding-top: 10%;
+}
+.informacion-adicional{
+    line-height: 30px;
+    margin-top: 15%;
+}
+.informacion-bottom img{
+    display: none;
+}
+.envio-retiro{
+    display: none;
+}
+.boton-compra{
+    margin-top: 12%;
+    width: 100%;
+}
+.boton-compra button{
+    background-color: #ffa700;
+    border: none;
+    border-radius: 6px;
+    padding: 4%;
+    margin: 0% 10%;
+    text-align: center;
+    width: 80%;
+}
+.boton-compra form{
+    margin: 6% 0;
+}
+.imagen-producto{
+    margin: 3% 0;
+}
+.imagen-producto img{
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+}
+.lista-de-especificaciones{
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 26px;
+}
+.lista-de-especificaciones p{
+    width: 50%;
+    padding-left: 2%;
+}
+.lista-de-especificaciones .gris{
+    background-color: #ebebeb;
+}
+form select{
+    border: 1px solid #646464;
+    background-color: #ebebeb;
+    border-radius: 7px;
+    width: 100%;
+    padding: 7px;
+    margin: 2% 0;
+    height: 13vw;   
+}
+.contenedor-main {
+    border-bottom: 1px solid #ebebeb;
+}
+.info{
+    margin-top: 5%;
+}
+#precio{
+    width: 100%;
+}
+.descuento{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2%;
+}
+#precio-total-descuento{
+    width: 30%;
+}
+#descuento{
+    width: 70%;   
+}
+#modificar-button{
+    background-color: rgb(5, 216, 5);
+}
+#eliminar-button{
+    background-color: #ff6159;
+}
+@media (min-width:768px){
+    .main{
+        padding: 5% 7% 15% 9%;
+        margin: 25% 0% 15% 0%;
+    }
+    .left{
+        width: 50%;
+    }
+    .right {
+        width: 50%;
+        border-left: 1px solid #ebebeb;
+    }
+    #precio{
+        text-align: center;
+    }
+    #descuento{
+        width: 45%;
+        margin-left: 5%;
+    }
+    .informacion-adicional h2 {
+        font-size: 18px;
+    }
+    .contenedor-main {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .imagen-producto {
+        width: 90%;
+        flex-wrap: wrap;
+        display: flex;
+        margin: 10% 5%;
+    }
+    .imagen-producto img {
+        width: 100%;
+        border: none;
+    }
+    .envio-retiro{
+        display: flex;
+    }
+    .informacion-adicional {
+        padding: 5%;
+        margin-top: 0%;
+    }
+    .lista-descripcion{
+        padding-bottom: 5%;
+    }
+    .especificaciones{
+        padding-top: 5%;
+    }
+    .producto-descripcion{
+        margin-top: 4%;
+        border-bottom: 1px solid #ebebeb;
+    }
+    .producto-nombre{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+    .producto-precio{
+        border-bottom: 1px solid #ebebeb;
+    }
+    form select{
+        height: 6vw;
+    }
+    .producto-nombre h3{
+        width: 100%;
+    }
+    #codigo{
+        width: 82%;
+    }
+    #titulo-codigo{
+        width: 18%;
+    }
+    .envio-retiro {
+        margin: 5% 0% 0 0;
+        width: 100%;
+        display: flex;
+        padding: 7% 6% 5% 6%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-top: 1px solid #ebebeb;
+    }
+    .envio {
+        color: green;
+        width: 45%;
+        text-align: center;
+        padding: 0px 2%;
+        margin: 4% 2%;
+    }
+    .envio a{
+        text-decoration: none;
+        color: green;
+    }
+    .retiro {
+        border-left: 1px solid #ebebeb;
+        color: green;
+        width: 37%;
+        text-align: center;
+        padding: 0px 2%;
+        margin: 4% 3%;
+    }
+    .retiro a{
+        text-decoration: none;
+        color: green;
+    }
+    .fa-store-alt {
+        color: green;
+    }
+    #precio-total-descuento{
+        width: 45%;
+        text-align: end;
+    }
+}
+
+
+@media (min-width:1200px){
+    main{
+        margin: 4% 10% 15% 10%;
+    }
+    .main{
+        margin: 0% 0% 15% 0%;
+        box-shadow: 0 0 5px #646464;
+        border: 1px solid #6464647d;
+        padding: 5% 7% 15% 9%;
+    }
+    .imagen-producto{
+        margin: 3% 21% 0;
+        width: 55%;
+        padding: 5% 0;
+    }
+    .imagen-producto img{
+        width: 100%;
+    }
+    .contenedor-main{
+        flex-wrap: wrap;
+        border-bottom: 1px solid #ebebeb;
+    }
+    .producto-nombre{
+        width: 100%;
+        border-bottom: 1px solid #ebebeb;
+    }
+    .producto-precio{
+        border-bottom: 1px solid #ebebeb;
+        width: 100%;
+        text-align: center;
+    }
+    .producto-precio p{
+        color: green;
+    }
+    .producto-descripcion{
+        margin-top: 0;
+        padding-top: 3%;
+    }
+    .producto-descripcion h4{
+        font-size: 25px;
+        padding: 0 0 1% 0;
+    }
+    .left{
+        width: 60%;
+        border-right: 1px solid #ebebeb;
+    }
+    .right {
+        width: 40%;
+    }
+    form select {
+        width: 100%;
+        height: 3vw;
+        margin: 2% 0%;
+    }
+    .informacion-adicional{
+        width: 100%;
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: 12.3%;
+        padding-top: 5%;
+    }
+    .informacion-bottom{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    .informacion-bottom img{
+        width: 15%;
+    }
+    #precio-cuotas{
+        width: 100%;
+    }
+    #precio-total {
+        width: 100%;
+    }
+    #precio-total-descuento{
+        width: 45%;
+        margin-right: 5%;
+        text-align: end;
+        text-decoration: line-through;
+    }
+    #precio {
+        width: 100%;
+        text-align: center;
+    }
+    #descuento {
+        text-align: start;
+        width: 45%;
+        margin-left: 5%;
+    }
+    .descuento {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .boton-compra{
+        margin: 12% 0;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .boton-compra button {
+        margin: -5% 10%;
+    }
+    #codigo{
+        width: 89%;
+    }
+    #titulo-codigo{
+        width: 11%;
+    }
+   
+    #vacio{
+        width: 100%;
+        opacity: 0;
+    }
+    #agregar{
+        width: 100%;
+    }
+    #modificar{
+        width: 50%;
+        margin: 7% 0% 0 5%;
+    }
+
+    #carrito{
+        width: 84%;
+    }
+    #eliminar{
+        width: 50%;
+        margin: 0% 0%;
+        position: absolute;
+        right: 3px;
+        bottom: 0px;
+    }   
+    #carrito, #modificar-button, #eliminar-button{
+        cursor: pointer;
+    }
+    .informacion{
+        padding: 2% 0%;
+    }
+    .informacion h4{
+        padding: 2% 0%;
+        font-size: 25px;
+    }
+    .especificaciones{
+        padding-top: 2%;
+    }
+    #titular-especificaciones {
+        padding: 2% 0;
+        font-size: 25px;
+    }
+    .descuento{
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link href="/css/carrito.css" rel="stylesheet">
+    <title>Carrito de compras</title>
+</head>
+<body>
+  <%- include('partials/header.ejs') %>
+      
+      <main>
+          <div class="main">
+          <h2 class="titulo-principal">Mi carrito</h2>
+          <div class="contenedor-main">
+            <div class="contenedor-top">
+              <p id="titulo-producto">PRODUCTO</p>
+              <p id="titulo-precio">PRECIO</p>
+              <p id="titulo-cantidad">CANTIDAD</p>
+              <p id="titulo-subtotal">SUBTOTAL</p>
+            </div>
+            <article>  
+              <div class="detalle-compra">
+                <div class="descripcion-producto">
+                  <img src="/img/img-tv-samsung-smart.jpg">
+                  <div class="producto-nombre">
+                    <h3>Samsung Smart TV</h3>
+                  </div>
+                </div>
+                <div class="opciones-producto">
+                 <div class="precio">
+                  <h4 id="producto-precio">$80.000</h4>
+                </div>
+                  <div class="cantidad-producto">
+                    <label for="cantidad">Cantidad: </label>
+                      <select name="cantidad">
+                        <option name="cantidad" value="1">1</option>
+                        <option name="cantidad" value="2">2</option>
+                        <option name="cantidad" value="3">3</option>
+                        <option name="cantidad" value="4">4</option>
+                        <option name="cantidad" value="5">5</option>
+                        <option name="cantidad" value="6">6</option>
+                        <option name="cantidad" value="7">7</option>
+                        <option name="cantidad" value="8">8</option>
+                      </select>
+                    </div>
+                  <div class="subtotal-producto">
+                    <h4>$80.000</h4>
+                  </div>
+            </div>
+                
+                <div class="eliminar">
+                  <a href="#"><i class="fas fa-trash-alt"></i></a>
+                </div>
+            </div>
+            </article>
+            <article>  
+            <div class="detalle-compra">
+              <div class="descripcion-producto">
+                <img src="/img/img-heladera-patrick.jpg">
+              <div class="producto-nombre">
+                  <h3>Heladera Patrick</h3>
+              </div>
+              </div>
+              <div class="opciones-producto">
+               <div class="precio">
+                <h4 id="producto-precio">$159.999</h4>
+              </div>
+                <div class="cantidad-producto">
+                  <label for="cantidad">Cantidad: </label>
+                    <select name="cantidad">
+                      <option name="cantidad" value="1">1</option>
+                      <option name="cantidad" value="2">2</option>
+                      <option name="cantidad" value="3">3</option>
+                      <option name="cantidad" value="4">4</option>
+                      <option name="cantidad" value="5">5</option>
+                      <option name="cantidad" value="6">6</option>
+                      <option name="cantidad" value="7">7</option>
+                      <option name="cantidad" value="8">8</option>
+                    </select>
+                </div>
+              <div class="subtotal-producto">
+                  <h4>$159.999</h4>
+              </div>
+          </div>
+              <div class="eliminar">
+                  <a href="#"><i class="fas fa-trash-alt"></i></a>
+              </div>
+          </div>
+            </article>
+            <article>  
+              <div class="detalle-compra">
+                <div class="descripcion-producto">
+                  <img src="/img/img-monitor-34.jpg">
+                <div class="producto-nombre">
+                    <h3>Monitor 34" 4K</h3>
+                </div>
+                </div>
+                <div class="opciones-producto">
+                 <div class="precio">
+                  <h4 id="producto-precio">$95.000</h4>
+                </div>
+                  <div class="cantidad-producto">
+                    <label for="cantidad">Cantidad: </label>
+                      <select name="cantidad">
+                        <option name="cantidad" value="1">1</option>
+                        <option name="cantidad" value="2">2</option>
+                        <option name="cantidad" value="3">3</option>
+                        <option name="cantidad" value="4">4</option>
+                        <option name="cantidad" value="5">5</option>
+                        <option name="cantidad" value="6">6</option>
+                        <option name="cantidad" value="7">7</option>
+                        <option name="cantidad" value="8">8</option>
+                      </select>
+                  </div>
+                <div class="subtotal-producto">
+                    <h4>$95.000</h4>
+                </div>
+            </div>
+                <div class="eliminar">
+                    <a href="#"><i class="fas fa-trash-alt"></i></a>
+                </div>
+            </div>
+            </article>
+            
+              </div>
+              <div class="cuadro-total">
+                <div class="cuadro-subtotal">
+                  <h2>Resumen</h2>
+                  <div class="subtotal">
+                    <h3 id="subtotal">SUBTOTAL:</h3> <h3>$80.000</h3>
+                  </div>
+                  <div class="total">
+                    <h3 id="total">TOTAL:</h3> <h3>$80.000</h3>
+                  </div>  
+                  </div>
+                <div class="boton-compra">
+                  <button type="submit">Finalizar compra</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="foot">
+        
+          <%- include('partials/footer.ejs') %>
+        </footer>
+</body>
+</html>

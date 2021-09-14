@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/editar-producto.css">
+    <% if(typeof producto !== 'undefined'){ %>
+        <%- include('partials/head.ejs', {title: 'Editando: ' + producto.name}) %>
+    <% }else{ %>
+        <%- include('partials/head.ejs', {title: 'Formulario de creación'}) %>
+    <% } %>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <main>
+        <div class="editar">
+        
+        <form action="/productos/crear" method="POST" enctype="multipart/form-data">
+
+            <label for="nombre">Nombre del producto</label>
+            <div class="campos-form">
+                <input type="text" name="name" id="nombre" value="<%= typeof producto.name != 'undefined' ? producto.name : '' %>" placeholder="Nombre del producto"><i class="far fa-edit"></i>
+            </div>
+            <label for="descripcion">Descripción:</label>
+            <div class="campos-form">
+                <input type="text" name="description" id="descripcion" value="<%= typeof producto.description != 'undefined' ? producto.description : '' %>" placeholder="Descripción"><i class="far fa-edit"></i>
+            </div>
+            <label for="imagen">Imágenes: </label>
+            <input type="file" name="image" id="imagen" multiple value="<%= typeof producto.image != 'undefined' ? producto.image : '' %>">
+            <p class="imagen-existente"><i class="far fa-image"></i>    Imagen del producto           <i class="fas fa-times"></i></p>
+
+            <label for="category">Categorias: </label>
+            <select name="category">
+                <option selected=" <%= typeof producto.category != 'undefined' ? producto.category : '' %> " value="producto.category"><%= producto.category %></option>
+                <option value="muebles">Muebles</option>
+                <option value="baño">Baño</option>
+                <option value="televisores">Televisores</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="cocina">Cocina</option>
+                <option value="tablet">Tablet</option>
+                <option value="celulares">Celulares</option>
+            </select>
+
+            <label for="colors">Colores: </label>
+            <select name="colors">
+                <option selected="<%= typeof producto.colors != 'undefined' ? producto.colors : '' %>" value="producto.colors"><%= producto.colors %></option>
+                <option value="azul">Azul</option>
+                <option value="negro">Negro</option>
+                <option value="blanco">Blanco</option>
+            </select>
+
+            <label for="precio">Precio: </label>
+            <div class="campos-form">
+                <input type="number" id="precio" name="price" min="1" value="<%= typeof producto.price != 'undefined' ? producto.price:'' %>" placeholder="$0"><i class="far fa-edit"></i>
+            </div>
+
+            <label for="discount">Descuento: </label>
+            <div class="campos-form">
+                <input type="number" id="discount" name="discount"  value="<%= typeof producto.discount != 'undefined' ? producto.discount:'' %>" placeholder="$0"><i class="far fa-edit"></i>
+            </div>
+
+            <div class="botones">
+                <button type="submit">Enviar</button>
+                <button type="reset">Eliminar</button>
+            </div>
+        </div>
+        </form>
+    </main>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

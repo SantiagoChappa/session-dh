@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link href="/css/detalle-del-producto.css" rel="stylesheet">
+    <title><%= producto.name %></title>
+</head>
+<body>
+  <%- include('partials/header.ejs') %>
+   
+      <main>
+          <div class="main">
+          <div class="contenedor-main">
+            <section class="left">
+            <div class="producto-nombre">
+                <h3><%= producto.name%></h3>
+                <span id="titulo-codigo">Codigo: </span><p id="codigo">MH30vb87M9l</p>
+            </div>
+            <div class="imagen-producto">
+                <img src="/img/productos/<%= producto.image %>">
+            </div>
+            <div class="envio-retiro">
+              <div class="envio">
+                <i class="fas fa-truck"></i>
+                <a href="#">Envíos a todo el país 7 días hábiles</a>
+              </div>
+              <div class="retiro">
+                <i class="fas fa-store-alt"></i>
+                <a href="#">Retiro gratis en sucursal</a>
+              </div>
+            </div>
+            </section>
+            <section class="right">
+              <div class="producto-precio">
+                <% if(producto.discount >= 1){ %>
+
+                <h3 id="precio">$<%= (producto.price - ((producto.discount / 100) * producto.price)).toLocaleString("es",{minimumFractionDigits: 0}) %></h3>
+                 
+                <% }else{ %>
+                  <h3 id="precio">$<%= producto.price.toLocaleString("es",{minimumFractionDigits: 0}) %></h3>
+              <% } %>
+              <div class="descuento">
+                <% if(producto.discount > 1){ %>
+                <p id="precio-total-descuento">$<%= producto.price.toLocaleString("es",{minimumFractionDigits: 0}) %></p>
+                <p id="descuento"><%= producto.discount %>% OFF</p>
+                <% }else{ %>
+                <p id="vacio">.</p>
+                <% } %>
+              </div>
+            </div>
+              <div class="informacion-adicional">
+                  <h2>Elegi tu forma de pago</h2>
+                <form action="/" method="POST">
+                    <select class="tarjetas">
+                        <option value="">Tarjeta</option>
+                        <option value="american-express">American Express</option>
+                        <option value="cabal-debito">Cabal Debito</option>
+                        <option value="master-card">MasterCard</option>
+                        <option value="maestro">Maestro</option>
+                        <option value="visa">Visa</option>
+                    </select>
+                    <select class="banco">
+                        <option value="">Banco</option>
+                        <option value="bbva-frances">BBVA Frances</option>
+                        <option value="comafi">COMAFI</option>
+                        <option value="patagonia">Patagonia</option>
+                        <option value="santander-rio">Santander Rio</option>
+                        <option value="tarjeta-naranja">Tarjeta Naranja</option>
+                    </select>
+                    <select class="cuotas">
+                        <option value="">Cuotas</option>
+                        <option value="1-cuotas-sin-interes">1 Cuota sin interes</option>
+                        <option value="3-cuotas-sin-interes">3 Cuotas sin interes</option>
+                        <option value="6-cuotas">6 Cuotas</option>
+                        <option value="ahora-12">Ahora 12</option>
+                        <option value="ahora-18">Ahora 18</option>
+                    </select>
+                </form>
+                <div class="informacion-bottom">
+                    <img src="/img/tarjetas.png">
+                    <p id="precio-cuotas">12 x $<%= (producto.price / 12).toLocaleString("es",{minimumFractionDigits: 0}) %> sin interés</p>
+                    <p id="precio-total">Precio total: $<%= producto.price.toLocaleString("es",{minimumFractionDigits: 0}) %></p>
+                    <p>CFT: 0% / TEA: 0% </p>
+                </div>
+              </div>
+              <div class="boton-compra">
+                <form action="/" method="POST" id="agregar">
+                  <button type="submit" id="carrito">Agregar al carrito</button>
+                </form>
+
+                <form action="/productos/editar/<%= producto.id %>" method="GET" id="modificar">
+                  <a href=""><button id="modificar-button">Modificar</button></a>
+                </form>
+
+                <form action="/productos/eliminar/<%= producto.id %>?_method=DELETE" method="POST" id="eliminar">
+                  <a href=""><button id="eliminar-button">Eliminar</button></a>
+                </form>
+            </div>
+            </section>
+          </div>
+          <section class="info">
+          <div class="informacion">
+              <h4>Información del producto</h4>
+              <p><%= producto.description %></p>
+          </div>
+          <div class="producto-descripcion">
+              <h4 class="titular-descripcion">Descripcion</h4>
+              <ul class="lista-descripcion">
+                  <li>Alto: 60cm</li>
+                  <li>Ancho: 98cm</li>
+                  <li>Profundidad: 18cm</li>
+                  <li>Garantía: 12 meses</li>
+                  <li>Tipo de sonido: Estéreo</li>
+                  <li>Puertos USB: No</li>
+                  <li>HDMI: Sí</li>
+              </ul>
+          </div>
+          <div class="especificaciones">
+            <h4 id="titular-especificaciones">Especificaciones tecnica</h4>
+            <div class="lista-de-especificaciones">
+                <p class="gris">Modelo</p><p class="gris">UN32T4300AGCZB</p>
+                <p>Marca</p><p>Samsung</p>
+                <p class="gris">Origen</p><p class="gris">Argentina</p>
+                <p>Cuotas sin interes</p><p>Hasta 12 cuotas</p>
+                <p class="gris">Tipo TV</p><p class="gris">Smart TV</p>
+                <p>Pantalla</p><p>32"</p>
+                <p class="gris">Tipo de pantalla</p><p class="gris">OLED</p>
+                <p>Resolución Máxima</p><p>4K</p>
+                <p class="gris">Conexión</p><p class="gris">USB, HDMI, WI-FI</p>
+                <p>Garantia de fábrica (meses)</p><p>12</p>
+                <p class="gris">Accesorios</p><p class="gris">Manual / Control remoto</p>
+            </div>
+          </div>
+        </section>
+        </div>
+      </main>
+      
+    <footer class="foot">
+        <%- include('partials/footer.ejs') %>
+    </footer>
+    
+</body>
+</html>

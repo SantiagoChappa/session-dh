@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link href="/css/register.css" rel="stylesheet">
+    <title>Registro</title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    
+    <main class="main-register">
+        <section class="registro">
+        <h2>REGISTRO</h2>
+
+        <form action="/registro" method="POST" enctype="multipart/form-data">
+        <div class="left-register">
+
+            <div>
+                <input type="text" name="fullName" id="nameRegister" placeholder="Nombre completo" value=<%= locals.oldBody ? oldBody.fullName : null %>>
+            </div>
+            <div class="text-error">
+                <% if (locals.errors && errors.fullName){ %>
+                <%=  errors.fullName.msg %>
+                <% } %>
+            </div>
+
+            <div>
+                <input type="email" name="email" id="emailRegister" placeholder="Correo electrónico" value=<%= locals.oldBody ? oldBody.email : null %>>
+            </div>
+            <div class="text-error">
+                <% if (locals.errors && errors.email){ %>
+                <%=  errors.email.msg %>
+                <% } %>
+            </div>
+
+            <div class="archivo">
+                <label for="images">Subir foto de perfil:</label>
+                <input type="file" name="image" id="imagenes" accept=".jpg , .png" multiple>
+            </div>
+            <div class="text-error">
+                <% if (locals.errors && errors.image){ %>
+                <%=  errors.image.msg %>
+                <% } %>
+            </div>
+            
+            <div>
+                <input type="password" name="password" id="passwordRegister" placeholder="Contraseña">
+            </div>
+            <div class="text-error">
+                <% if (locals.errors && errors.password){ %>
+                <%=  errors.password.msg %>
+                <% } %>
+            </div>
+            
+                <button type="submit" id="boton-registro">Registrarme</button>
+        </div>
+        <div class="right-register">
+                <label for="boton-ingreso">¿Ya tenés una cuenta?</label>
+                <button id="boton-ingreso">Ingresar</button>
+        </div>
+    </form>
+    </section>
+    </main>
+    <footer  class="foot">
+        <%- include('partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
